@@ -60,3 +60,6 @@
     white-space: pre-wrap;
   }
   
+  .loader{
+    color: #00bfff;
+  }

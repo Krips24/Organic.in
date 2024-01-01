@@ -1,13 +1,17 @@
 // Features.jsx
-import React, { useState } from 'react';
-import Navbar from "./Navbar"
+import React, { useState, useEffect } from 'react';
+import Navbar from "./Navbar";
+import Loader from "react-js-loader";
 
 const Features = () => {
   const [prompt, setPrompt] = useState('');
   const [responseText, setResponseText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleGenerateContent = async () => {
     try {
+      setIsLoading(true);
+
       const response = await fetch('http://localhost:3001/generate-content', {
         method: 'POST',
         headers: {
@@ -28,6 +32,8 @@ const Features = () => {
       setResponseText(formattedText);
     } catch (error) {
       console.error('Error fetching data:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -49,11 +55,20 @@ const Features = () => {
           <button onClick={handleGenerateContent}>Generate</button>
         </div>
         <div className="chat-response">
-          <strong>Response:</strong> <pre>{responseText}</pre>
+          <strong>Response:</strong>
+          {isLoading ? (
+            <Loader type="bubble-loop" bgColor={"#00bfff"}  size={50} />
+
+
+
+
+
+          ) : (
+            <pre>{responseText}</pre>
+          )}
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -3,19 +3,28 @@ import Navbar from "./Navbar";
 
 function About() {
     return (
-        <div className="about-container">
-            <Navbar />
-            <div className="content">
-            <link rel="stylesheet" type="text/css" href="/css/home/styles.css" />
+        <div>
+            <link rel="stylesheet" type="text/css" href="/css/about/styles.css" />
 
-                <h1>About Us</h1>
-                <p>
-                    Welcome to our website! We are a team of passionate individuals
-                    dedicated to providing valuable information and services to our users.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-                </p>
+            <Navbar />
+            <div className="about-container">
+                <div className="content">
+                    <div className="text-container">
+                        <h1>About Us</h1>
+                        <p>
+
+                            Welcome to Organic.in, your go-to destination for culinary inspiration! Our AI generative recipe web app is crafted for both chefs and home cooks. Discover unique, organic recipes tailored to your taste and dietary preferences. With an interactive interface, cooking becomes a personalized, eco-conscious adventure. Join us at Organic.in and reimagine the art of cooking with innovation and sustainability.
+                        </p>
+                    </div>
+                    <div className="image-container">
+                        <img src="css/about/images/about.svg" alt="About Us" />
+                    </div>
+                </div>
             </div>
+
+
         </div>
+
     );
 }
 
