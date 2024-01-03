@@ -3,7 +3,7 @@
 
 Welcome to Organic.in, a web application developed using the MERN stack. This platform is designed to revolutionize your approach to health and wellness, offering AI-integrated features that empower users to achieve their fitness goals through personalized meal plans, recipes, and detailed nutritional information.
 
-[![Click to watch the video](https://github.com/Krips24/Organic.in/blob/master/public/css/Screenshot%202024-01-03%20192353.png)](https://drive.google.com/file/d/1cljChAmgeQDDKvzNMBo9r8Pk-SJUYS5X/view)
+[![Click to watch the video](https://github.com/Krips24/Organic.in/blob/master/public/css/Screenshot%202024-01-03%20123603.png)](https://drive.google.com/file/d/1cljChAmgeQDDKvzNMBo9r8Pk-SJUYS5X/view)
 
 
 ## Features
