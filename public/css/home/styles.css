@@ -25,6 +25,7 @@
     margin-left: 55rem; /* Center the content horizontally */
     margin-top: 6rem;
     padding: 20px; /* Add padding for spacing around the content */
+    text-align:center;
   }
   
   .start-now-button {
