@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function home() {
   return (
@@ -19,6 +20,7 @@ function home() {
           START NOW
         </a>
       </div>
+      <Footer />
     </div>
   );
 }

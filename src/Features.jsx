@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Loader from "react-js-loader";
+import Footer from "./Footer";
 
 const Features = () => {
   // New state variables
@@ -11,7 +12,7 @@ const Features = () => {
   const [height, setHeight] = useState(170); // Default height
   const [weight, setWeight] = useState(70); // Default weight
   const [isMale, setIsMale] = useState(false);
-  const [isFemnale, setIsFemale] = useState(false);
+  const [isFemale, setIsFemale] = useState(false);
   const [isVeg, setIsVeg] = useState(false);
   const [isNonVeg, setIsNonVeg] = useState(false);
   const [isVegan, setIsVegan] = useState(false);
@@ -34,7 +35,7 @@ const Features = () => {
           data: prompt,
           height,
           weight,
-          gender: { isMale, isFemnale },
+          gender: { isMale, isFemale },
           activity: { isActive, isModerate, isInactive },
           dietaryPreferences: { isVeg, isNonVeg, isVegan },
           target: { isWeightLoss, isWeightGain },
@@ -108,8 +109,8 @@ const Features = () => {
                 className="input2"
                 type="radio"
                 name="gender"
-                checked={isFemnale}
-                onChange={() => setIsFemale(!isFemnale)}
+                checked={isFemale}
+                onChange={() => setIsFemale(!isFemale)}
               />{" "}
               Female
             </label>
@@ -235,6 +236,7 @@ const Features = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

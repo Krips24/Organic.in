@@ -88,7 +88,7 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.5s ease;
-  border-radius: 7px;
+  border-radius: 30px;
 }
 
 button:hover {
@@ -97,8 +97,9 @@ button:hover {
 
 /* Medium size input prompt for user input */
 textarea {
+  color: #acacac;
   width: 100%;
-  padding: 12px; /* Increased padding for better input appearance */
+  padding: 12px 1px; /* Increased padding for better input appearance */
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 20px;

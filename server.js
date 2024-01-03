@@ -93,34 +93,36 @@ app.post("/generate-content", async (req, res) => {
     const height = req.body.height;
     const weight = req.body.weight;
     const gender = req.body.gender;
-    const selectedGender = Object.keys(gender).find(key => gender[key]);
+    const selectedGender = Object.keys(gender).find((key) => gender[key]);
     const activity = req.body.activity;
-    const selectedActivity = Object.keys(activity).find(key => activity[key]);
+    const selectedActivity = Object.keys(activity).find((key) => activity[key]);
     const dietaryPreferences = req.body.dietaryPreferences;
-    const selectedDietaryPreferences = Object.keys(dietaryPreferences).find(key => dietaryPreferences[key]);
+    const selectedDietaryPreferences = Object.keys(dietaryPreferences).find(
+      (key) => dietaryPreferences[key]
+    );
     const target = req.body.target;
-    const selectedTarget = Object.keys(target).find(key => target[key]);
+    const selectedTarget = Object.keys(target).find((key) => target[key]);
     console.log(req.body);
 
     // Generate content using the model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     const result = await model.generateContent(
-      "Hi gemini, i have integrated you in my recipe generating web app, so i have asked mu users some recipe related questions, based on those questions you please generate recipes, calculate BMI with height: " +
-        "dietary preference as: " +
-        selectedDietaryPreferences +
+      "calculat BMI and generate recipes and give each and every detail of how much protein, carbs, fats and calories the person should eat and provide food with recipes from where the person can eat, all the necassay deatils are give below:  Height is:  " +
         height +
-        "weight: " +
+        " Weight is: " +
         weight +
-        "gender is: " +
+        " Dietary Preference as: " +
+        selectedDietaryPreferences +
+        " gender " +
         selectedGender +
-        "with activity level as: " +
+        " with Acitivity Level of:  " +
         selectedActivity +
-        "with target of : " +
+        " with Target of  " +
         selectedTarget +
-        "and some additional questions as: " +
+        " with additional input as:  " +
         prompt +
-        " first of all calculate the BMI and show maintanence calories, amount of protein require, amout of carbs require, amount of fats require and total amount of calories required, and generate the recipes according to required amount of macros only and please generate recipes according to Indian food lifestyle  and please dont generate any answer other than food realted questions "
+        " from these information, tell if the person is normal, overweight or underweight and provide any necassary feedback you want to provide, and please dont provide any answer, if the question is not related to food, thank you "
     );
     const response = await result.response;
     const text = response.text();
