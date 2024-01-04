@@ -25,3 +25,39 @@ Follow these steps to get started with Organic.in:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/your-username/Organic.in.git
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Organic.in
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure your MongoDB connection by editing the `config.js` file.
+
+5. Start the application:
+
+   ```bash
+   nodemon app.js and npm start
+   ```
+
+6. Access MediTrack in your web browser at `http://localhost:3000`.
+
+## Contributing
+
+We welcome contributions from the community to make Organic even better. If you'd like to contribute, please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or need assistance, feel free to reach out to us at [krapansh.work@gmail.com].
+
+Thank you for using Organic.in! We hope you can enhance your healthy lifestyle.
